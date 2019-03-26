@@ -44,10 +44,10 @@ int main(){
 	for(int i=0; i<lim1; i++){
 		if(i<n_ele/(lim2*lim3)){
 			cout<<"strato"<<i<<endl;
-			stampaS(p, lim2, lim3, lim2*lim3);
+			stampaS(p + i*lim2*lim3, lim2, lim3, lim2*lim3);
 		}else if(i==n_ele/(lim2*lim3) && n_ele%(lim2*lim3)>0){
 			cout<<"strato"<<i<<endl;
-			stampaS(p, lim2, lim3, n_ele%(lim2*lim3));
+			stampaS(p + i*lim2*lim3, lim2, lim3, n_ele%(lim2*lim3));
 		}
 	}
 
