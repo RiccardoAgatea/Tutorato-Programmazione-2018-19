@@ -47,7 +47,7 @@ int main()
 
 			for (int p = 0; (p < 5) && !found; ++p) //4
 				for (int q = 0; (q < 5) && !found; ++q) //5
-					if (A[i][p] == A[j][q])
+					if (A2[i][p] == A2[j][q])
 						found = true;
 
 			B[i][j] = !found;
