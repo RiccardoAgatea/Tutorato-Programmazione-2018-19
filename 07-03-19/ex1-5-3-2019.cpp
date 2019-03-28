@@ -10,10 +10,10 @@ int main()
 		cin >> A[i];
 
 	cout << "start" << endl;
-	//N pari -> controllo tutto ===> caso nostro
-	//N dispari -> quello centrale è ininfluente
+	//N pari -> controllo la prima metà
+	//N dispari -> controllo i primi (N-1)/2, quello centrale è ininfluente
 	int i = 0;
-	bool palindromo = false;
+	bool palindromo = true;
 
 	//PRE = (A[0...n-1] contiene gli N valori prelevati da cin dopo N) && (i==0) && palindromo
 	while (i < N / 2 && palindromo)
