@@ -3,8 +3,8 @@ using namespace std;
 
 struct node
 {
-    int x;
-    bool s;
+    int x; //contenuto del nodo
+    bool s; //stato del nodo; false <==> non attraversato \ vero <==> attraversato
     node* left;
     node* right;
 
