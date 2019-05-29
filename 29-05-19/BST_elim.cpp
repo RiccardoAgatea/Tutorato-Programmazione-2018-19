@@ -77,3 +77,4 @@ Analogamente è vero per il caso ricorsivo (2)
  */
 
 //NB: Il motivo per cui non funzionava è che nel caso in cui r abbia due figli non veniva mai riassegnato r a p. Chiaramente, avendo sostituito il nodo radice con il nodo puntato da p, va anche "spostato" r perchè punti al nuovo nodo radice.
+//In effetti il testo chiedeva di sovrascrivere r->info con p->info, però come detto in classe questo è molto specifico e poco generalizzabile, quindi ho preferito sostituire interamente il nodo.
