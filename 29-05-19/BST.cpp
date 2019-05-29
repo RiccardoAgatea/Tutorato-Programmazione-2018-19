@@ -20,22 +20,31 @@ void stampa_l(nodo* r)
 //PRE: r è un albero ben formato
 nodo* insert(nodo*r, int x)
 {
-  //caso base 0
+  //caso base (0)
   if(r==0)
-    //essendo l'albe
+    //essendo l'albero vuoto ritorno una nuova radice con info==x che è un BST => POST
     return new nodo(x);
   if(!r->left && x < r->info) 
   {
+    //il nodo non ha a sinistra figli quindi inserisco li' un nodo 
+    //con campo info==x; per la PRE, essendo albero(r) un BST, il nodo di destra è un BST
+    //proprietà mantenuta inserendo un nuovo nodo a sinistra senza figli=>POST
     r->left = new nodo(x);
     return r->left;
   }
   else if(!r->right && x > r->info) 
   {
+    //come sopra
     r->right = new nodo(x);
     return r->right;
   }
   else
   {
+    //PRE + !0 && !1 && !2 => PRE_ric
+    //assumo la POST_ric
+    //dato che passo ad insert il nodo figlio left se x<r->info o right in caso contrario
+    //la chiamata ricorsiva per ipotesi induttiva ritorna un BST contenente un nuovo nodo
+    //con info==x => POST
     return insert(x < r->info ? r->left : r->right,x);
    }
  }
