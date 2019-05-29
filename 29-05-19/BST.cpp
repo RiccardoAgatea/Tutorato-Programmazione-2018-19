@@ -97,14 +97,25 @@ int altMin(nodo*r)
   return 1+min(lHeight,rHeight);
 }
 
-void elim(nodo* r, int x)
+void elim(nodo*& r, int x)
 {
   if(r->info==x)
   {
     if(!r->left && !r->right)
     {
-      delete r;
-      
+        r = NULL;
+    }
+    else if(r->left && !r->right)
+    {
+        r = r->left;
+    }
+    else if(!r->left && r->right)
+    {
+        r = r->right;
+    }
+    else
+    {
+        
     }
     
   }
