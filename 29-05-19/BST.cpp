@@ -115,7 +115,11 @@ void elim(nodo*& r, int x)
     }
     else
     {
-        
+        nodo*& y = min(r->right);
+        //il seguente metodo è valido SOLO per alberi con campi info non strutturati, ovvero int char e float et simili
+        //per caso generale riferirsi a BST_elim.cpp
+        r->info = y->info;
+        elim(y, y->info);
     }
     
   }
